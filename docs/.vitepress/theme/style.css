@@ -1,0 +1,382 @@
+/* =============================================
+   djs-next / dnext — Custom VitePress Theme
+   Colors: Blurple + Golden from logo
+   ============================================= */
+
+/* --- Remove webkit tap highlight everywhere --- */
+/* --- Hide Nav Elements Globally --- */
+.VPNavBarSearch,
+.VPNavBarAppearance,
+.VPNavBarHamburger,
+.VPNavBarExtra {
+  display: none !important;
+}
+
+/* --- Custom Logo and Title per Ecosystem --- */
+html.home-root-page .VPNavBarTitle .logo {
+  content: url('/dnext.png');
+}
+
+html.djs-next-page .VPNavBarTitle .logo {
+  content: url('/logo.png');
+}
+html.djs-next-page .VPNavBarTitle .title span {
+  display: none !important;
+}
+html.djs-next-page .VPNavBarTitle .title::after {
+  content: "DiscordJS Next";
+  font-weight: 600;
+}
+
+html.dpy-next-page .VPNavBarTitle .logo {
+  content: url('/dpy-next.png');
+}
+html.dpy-next-page .VPNavBarTitle .title span {
+  display: none !important;
+}
+html.dpy-next-page .VPNavBarTitle .title::after {
+  content: "DiscordPY Next";
+  font-weight: 600;
+}
+
+/* --- Conditional Badges --- */
+html.home-root-page .badges-section .badge-version,
+html.home-root-page .badges-section .badge-downloads {
+  display: none !important;
+}
+
+html:not(.home-root-page) .badges-section .badge-combined {
+  display: none !important;
+}
+
+/* --- Custom Hero Buttons (Discord & GitHub) --- */
+.VPHero .actions a[href*="github.com"] {
+  background-color: #24292e !important;
+  color: #fff !important;
+  border-color: #24292e !important;
+}
+.VPHero .actions a[href*="github.com"]:hover {
+  background-color: #1b1f23 !important;
+}
+.VPHero .actions a[href*="github.com"]::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: text-bottom;
+  background-color: currentColor;
+  mask: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Cpath d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/%3E%3C/svg%3E') no-repeat center / contain;
+  -webkit-mask: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"%3E%3Cpath d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/%3E%3C/svg%3E') no-repeat center / contain;
+}
+
+.VPHero .actions a[href*="discord.gg"] {
+  background-color: #5865F2 !important;
+  color: #fff !important;
+  border-color: #5865F2 !important;
+}
+.VPHero .actions a[href*="discord.gg"]:hover {
+  background-color: #4752C4 !important;
+}
+.VPHero .actions a[href*="discord.gg"]::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  vertical-align: middle;
+  background-color: currentColor;
+  mask: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"%3E%3Cpath d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83A97.68 97.68 0 0 0 49 6.83 72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21h0A105.73 105.73 0 0 0 32.71 96.36 77.7 77.7 0 0 0 39.6 85.25a68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1A105.25 105.25 0 0 0 126.6 80.22h0C129.24 52.84 122.09 29.11 107.7 8.07ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53 48.84 65.69 42.45 65.69Zm42.24 0C78.41 65.69 73.31 60 73.31 53s5-12.74 11.43-12.74S96.1 46 96 53 91 65.69 84.69 65.69Z"/%3E%3C/svg%3E') no-repeat center / contain;
+  -webkit-mask: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"%3E%3Cpath d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83A97.68 97.68 0 0 0 49 6.83 72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21h0A105.73 105.73 0 0 0 32.71 96.36 77.7 77.7 0 0 0 39.6 85.25a68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1A105.25 105.25 0 0 0 126.6 80.22h0C129.24 52.84 122.09 29.11 107.7 8.07ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53 48.84 65.69 42.45 65.69Zm42.24 0C78.41 65.69 73.31 60 73.31 53s5-12.74 11.43-12.74S96.1 46 96 53 91 65.69 84.69 65.69Z"/%3E%3C/svg%3E') no-repeat center / contain;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* --- Color System (matching djs-next.png logo) --- */
+:root {
+  /* Blurple (the D in the logo) */
+  --vp-c-brand-1: #5b69f6;
+  --vp-c-brand-2: #4856e3;
+  --vp-c-brand-3: #3c4cd1;
+  --vp-c-brand-soft: rgba(91, 105, 246, 0.14);
+  
+  /* Hero name gradient */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #6f7cf8 0%, #5b69f6 40%, #ffc107 100%);
+
+  /* Hero image glow */
+  --vp-home-hero-image-background-image: linear-gradient(135deg, rgba(91, 105, 246, 0.3) 0%, rgba(255, 193, 7, 0.15) 100%);
+  --vp-home-hero-image-filter: blur(56px);
+
+  /* Primary brand buttons */
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: #fff;
+  --vp-button-brand-bg: #5b69f6;
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: #fff;
+  --vp-button-brand-hover-bg: #4856e3;
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: #fff;
+  --vp-button-brand-active-bg: #3c4cd1;
+
+  /* Alt buttons (Golden slash from logo) */
+  --vp-button-alt-border: transparent;
+  --vp-button-alt-text: #000;
+  --vp-button-alt-bg: #ffc107;
+  --vp-button-alt-hover-border: transparent;
+  --vp-button-alt-hover-text: #000;
+  --vp-button-alt-hover-bg: #ffcd38;
+  --vp-button-alt-active-border: transparent;
+  --vp-button-alt-active-text: #000;
+  --vp-button-alt-active-bg: #e0a800;
+}
+
+/* --- Dark mode: Pure black backgrounds --- */
+.dark {
+  --vp-c-bg: #000000;
+  --vp-c-bg-alt: #0a0a0a;
+  --vp-c-bg-elv: #111111;
+  --vp-c-bg-soft: #161616;
+}
+
+html {
+  background-color: #000000;
+}
+
+/* =============================================
+   SMOOTH ANIMATIONS
+   ============================================= */
+
+/* --- Page-level fade-in on load --- */
+.VPContent {
+  animation: fadeInUp 0.5s ease-out both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Hero section animations --- */
+.VPHero .main {
+  animation: heroReveal 0.7s ease-out both;
+}
+
+.VPHero .image-container {
+  animation: heroImageFloat 6s ease-in-out infinite, heroReveal 0.7s ease-out 0.15s both;
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroImageFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* --- Hero buttons: smooth hover lift --- */
+.VPButton {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease !important;
+}
+
+.VPButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(91, 105, 246, 0.25);
+}
+
+.VPButton:active {
+  transform: translateY(0);
+}
+
+/* --- Feature cards: staggered slide-in + hover --- */
+.VPFeature {
+  animation: featureSlideIn 0.6s ease-out both;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease !important;
+}
+
+.VPFeature:nth-child(1) { animation-delay: 0.1s; }
+.VPFeature:nth-child(2) { animation-delay: 0.15s; }
+.VPFeature:nth-child(3) { animation-delay: 0.2s; }
+.VPFeature:nth-child(4) { animation-delay: 0.25s; }
+.VPFeature:nth-child(5) { animation-delay: 0.3s; }
+.VPFeature:nth-child(6) { animation-delay: 0.35s; }
+
+@keyframes featureSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.VPFeature:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 16px 48px rgba(91, 105, 246, 0.12);
+  border-color: var(--vp-c-brand-1) !important;
+}
+
+/* --- Feature icon coloring and subtle bounce on hover --- */
+.VPFeature .icon {
+  color: var(--vp-c-brand-1) !important;
+  transition: color 0.4s ease, transform 0.4s ease;
+}
+
+.VPFeature:hover .icon {
+  animation: iconBounce 0.4s ease;
+  color: #ffc107 !important; /* Changes to golden yellow on hover */
+}
+
+@keyframes iconBounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+/* --- Sidebar links: smooth slide transitions --- */
+.VPSidebarItem .link {
+  transition: color 0.2s ease, padding-left 0.2s ease !important;
+}
+
+.VPSidebarItem .link:hover {
+  padding-left: 4px;
+}
+
+/* --- Sidebar active indicator glow --- */
+.VPSidebarItem.is-active > .item > .link {
+  position: relative;
+}
+
+.VPSidebarItem.is-active > .item > .link::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 60%;
+  background: var(--vp-c-brand-1);
+  border-radius: 4px;
+  box-shadow: 0 0 12px rgba(91, 105, 246, 0.4);
+}
+
+/* --- Navbar: subtle glass effect in dark mode --- */
+.dark .VPNav {
+  backdrop-filter: blur(12px) saturate(1.2);
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* --- Navbar logo hover spin --- */
+.VPNavBarTitle .logo {
+  transition: transform 0.4s ease !important;
+}
+
+.VPNavBarTitle:hover .logo {
+  transform: rotate(8deg) scale(1.05);
+}
+
+/* --- Nav links smooth underline animation --- */
+.VPNavBarMenuLink {
+  position: relative;
+  transition: color 0.2s ease !important;
+}
+
+.VPNavBarMenuLink::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--vp-c-brand-1);
+  transition: width 0.3s ease, left 0.3s ease;
+  border-radius: 2px;
+}
+
+.VPNavBarMenuLink:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* --- Content links: smooth color transition --- */
+.vp-doc a {
+  transition: color 0.2s ease, text-decoration-color 0.2s ease !important;
+}
+
+/* --- Code blocks: smooth border glow on hover --- */
+.vp-doc div[class*="language-"] {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+  border: 1px solid transparent;
+}
+
+.vp-doc div[class*="language-"]:hover {
+  border-color: rgba(91, 105, 246, 0.3);
+  box-shadow: 0 4px 24px rgba(91, 105, 246, 0.08);
+}
+
+/* --- Tables: row hover highlight --- */
+.vp-doc tr {
+  transition: background-color 0.2s ease !important;
+}
+
+.vp-doc tr:hover {
+  background-color: var(--vp-c-brand-soft) !important;
+}
+
+/* --- Footer fade-in --- */
+.VPFooter {
+  animation: fadeInUp 0.5s ease-out 0.3s both;
+}
+
+/* --- Scrollbar styling (non-webkit, Firefox) --- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--vp-c-brand-1) transparent;
+}
+
+/* --- Custom Warning/Tip boxes animation --- */
+.vp-doc .custom-block {
+  transition: border-color 0.3s ease, transform 0.2s ease !important;
+}
+
+.vp-doc .custom-block:hover {
+  transform: translateX(4px);
+}
+
+/* --- Team page member card animations --- */
+.VPTeamMembers .member {
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.VPTeamMembers .member:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(91, 105, 246, 0.15);
+}
+
+/* --- Selection color override --- */
+::selection {
+  background: rgba(91, 105, 246, 0.3);
+  color: #fff;
+}
+
+/* --- Smooth page transitions between routes --- */
+.vp-doc {
+  animation: fadeInUp 0.5s ease-out both;
+}
