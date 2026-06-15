@@ -8,7 +8,7 @@ export default defineConfig({
   appearance: 'force-dark',
   
   head: [
-    ['link', { rel: 'icon', href: '/logo.png' }],
+    ['link', { rel: 'icon', href: '/dnext.png' }],
     // OpenGraph
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Discord Next — The Next-Gen Discord Ecosystem' }],
