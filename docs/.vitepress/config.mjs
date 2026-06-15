@@ -68,7 +68,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/rugved-danej/d-next' },
+      { icon: 'github', link: 'https://github.com/dbatnext/djs-next' },
       { icon: 'discord', link: 'https://discord.gg/XKzUqhVCaS' }
     ],
 

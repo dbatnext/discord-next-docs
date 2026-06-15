@@ -14,7 +14,7 @@ hero:
       link: /djs-next/
     - theme: alt
       text: GitHub
-      link: https://github.com/rugved-danej/d-next
+      link: https://github.com/dbatnext/djs-next
     - theme: alt
       text: Join Discord Server
       link: https://discord.gg/XKzUqhVCaS
