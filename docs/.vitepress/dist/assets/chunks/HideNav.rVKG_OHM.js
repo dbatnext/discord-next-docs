@@ -1,1 +1,0 @@
-import{v as e,x as n}from"./framework.BQPoQUzP.js";const u={__name:"HideNav",setup(t){return e(()=>{typeof document<"u"&&document.documentElement.classList.add("hide-search-hamburger")}),n(()=>{typeof document<"u"&&document.documentElement.classList.remove("hide-search-hamburger")}),(o,d)=>null}};export{u as _};

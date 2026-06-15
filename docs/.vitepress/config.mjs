@@ -13,13 +13,13 @@ export default defineConfig({
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Discord Next — The Next-Gen Discord Ecosystem' }],
     ['meta', { property: 'og:description', content: 'A hyper-modern, production-ready framework for Discord.js featuring file-based routing, native developer tools, HMR, and built-in safety nets.' }],
-    ['meta', { property: 'og:image', content: 'https://dnext.vercel.app/logo.png' }],
-    ['meta', { property: 'og:url', content: 'https://dnext.vercel.app' }],
+    ['meta', { property: 'og:image', content: 'https://discordnext.vercel.app/logo.png' }],
+    ['meta', { property: 'og:url', content: 'https://discordnext.vercel.app' }],
     // Twitter Card
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Discord Next — The Next-Gen Discord Ecosystem' }],
     ['meta', { name: 'twitter:description', content: 'A hyper-modern, production-ready framework for Discord.js featuring file-based routing, native developer tools, HMR, and built-in safety nets.' }],
-    ['meta', { name: 'twitter:image', content: 'https://dnext.vercel.app/logo.png' }],
+    ['meta', { name: 'twitter:image', content: 'https://discordnext.vercel.app/logo.png' }],
     // Theme Color (Discord embed sidebar)
     ['meta', { name: 'theme-color', content: '#5b69f6' }],
   ],
