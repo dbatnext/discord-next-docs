@@ -64,6 +64,14 @@ export default defineConfig({
             { text: 'Type Definitions', link: '/djs-next/api/types' },
           ]
         }
+      ],
+      '/dpy-next/': [
+        {
+          text: 'Introduction',
+          items: [
+            { text: 'Getting Started', link: '/dpy-next/guide/getting-started' },
+          ]
+        }
       ]
     },
 
