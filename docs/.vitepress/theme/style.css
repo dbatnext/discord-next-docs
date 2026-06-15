@@ -3,6 +3,18 @@
    Colors: Blurple + Golden from logo
    ============================================= */
 
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* --- Next-Gen Typography --- */
+:root {
+  --vp-font-family-mono: 'JetBrains Mono', monospace;
+}
+
+h1, h2, h3, h4, h5, h6, .VPHero .name, .VPFeature .title {
+  font-family: 'Space Grotesk', sans-serif !important;
+  letter-spacing: -0.02em;
+}
+
 /* --- Remove webkit tap highlight everywhere --- */
 /* --- Hide Nav Elements Globally --- */
 .VPNavBarSearch,
@@ -277,10 +289,103 @@ html {
   box-shadow: 0 0 12px rgba(91, 105, 246, 0.4);
 }
 
+/* --- Right Sidebar (On this page) active indicator --- */
+.VPDocAsideOutline .outline-link {
+  position: relative;
+  transition: color 0.25s ease, transform 0.2s ease !important;
+}
+
+.VPDocAsideOutline .outline-link:hover {
+  transform: translateX(2px);
+}
+
+.VPDocAsideOutline .outline-link.active {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+.VPDocAsideOutline .outline-link.active::before {
+  content: '';
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 14px;
+  background: var(--vp-c-brand-1);
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(91, 105, 246, 0.4);
+  animation: slideInRight 0.2s ease-out both;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translate(-4px, -50%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, -50%);
+  }
+}
+
 /* --- Navbar: subtle glass effect in dark mode --- */
 .dark .VPNav {
-  backdrop-filter: blur(12px) saturate(1.2);
-  background: rgba(0, 0, 0, 0.7) !important;
+  margin: 16px auto !important;
+  width: calc(100% - 32px) !important;
+  max-width: 1400px;
+  border-radius: 50px !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(24px) saturate(1.5) !important;
+  background: rgba(10, 10, 10, 0.6) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+  top: 8px !important;
+  left: 0;
+  right: 0;
+  transition: background-color 0.5s;
+}
+
+.VPNavBar {
+  background: transparent !important;
+  border-bottom: none !important;
+}
+
+/* Compensate padding for floating nav */
+.VPContent {
+  padding-top: var(--vp-nav-height) !important;
+}
+
+/* --- Mac-Style Code Blocks --- */
+div[class*="language-"] {
+  position: relative;
+  padding-top: 2rem !important;
+  border-radius: 12px !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+  border: 1px solid transparent;
+}
+
+div[class*="language-"]::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff5f56;
+  box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+  z-index: 2;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+div[class*="language-"]:hover::before {
+  opacity: 1;
+}
+
+div[class*="language-"]:hover {
+  border-color: rgba(91, 105, 246, 0.3);
+  box-shadow: 0 4px 24px rgba(91, 105, 246, 0.08);
 }
 
 /* --- Navbar logo hover spin --- */
@@ -379,4 +484,38 @@ html {
 /* --- Smooth page transitions between routes --- */
 .vp-doc {
   animation: fadeInUp 0.5s ease-out both;
+}
+
+/* =============================================
+   CUSTOM HERO BUTTON THEMES (JS/TS vs Python)
+   ============================================= */
+
+/* DiscordJS Next Button (Black Theme with White Outline) */
+.VPHero .actions a[href*="/djs-next/"] {
+  background: url('/logo.png') no-repeat left 16px center / 22px, #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #ffffff !important;
+  font-weight: 700;
+  padding-left: 48px !important;
+  box-shadow: 0 4px 14px rgba(255, 255, 255, 0.1);
+}
+.VPHero .actions a[href*="/djs-next/"]:hover {
+  background: url('/logo.png') no-repeat left 16px center / 22px, #111111 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Force 2nd button (Discord) to a new line so the first one is isolated, or just center them */
+.VPHero .actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  gap: 16px !important;
+}
+.VPHero .actions .action:nth-child(2) {
+  flex-basis: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 8px !important;
 }

@@ -4,7 +4,6 @@ export default defineConfig({
   title: "Discord Next",
   description: "The hyper-modern, production-ready ecosystem for Discord.js.",
   cleanUrls: true,
-  lastUpdated: true,
   appearance: 'force-dark',
   
   head: [
@@ -64,14 +63,6 @@ export default defineConfig({
             { text: 'Type Definitions', link: '/djs-next/api/types' },
           ]
         }
-      ],
-      '/dpy-next/': [
-        {
-          text: 'Introduction',
-          items: [
-            { text: 'Getting Started', link: '/dpy-next/guide/getting-started' },
-          ]
-        }
       ]
     },
 
@@ -90,10 +81,6 @@ export default defineConfig({
     docFooter: {
       prev: '← Previous',
       next: 'Next →'
-    },
-
-    lastUpdated: {
-      text: 'Last updated'
     }
   }
 })

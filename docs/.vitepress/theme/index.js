@@ -3,6 +3,8 @@ import './style.css';
 import { h, watch, onMounted } from 'vue';
 import { useRoute } from 'vitepress';
 import BadgesBar from './BadgesBar.vue';
+import ScrollProgress from './ScrollProgress.vue';
+import TerminalDemo from './TerminalDemo.vue';
 
 const PathManager = {
   setup() {
@@ -28,7 +30,8 @@ export default {
   Layout() {
     return h(DefaultTheme.Layout, null, {
       'home-hero-info-after': () => h(BadgesBar),
-      'layout-bottom': () => h(PathManager)
+      'home-hero-after': () => h(TerminalDemo),
+      'layout-bottom': () => [h(PathManager), h(ScrollProgress)]
     })
   }
 };
