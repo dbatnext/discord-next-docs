@@ -28,8 +28,6 @@ features:
   - icon: '<svg class="lucide lucide-python" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="4"/><path d="M7 16V8h2.5a2.5 2.5 0 0 1 0 5H7"/><path d="M13 8l2 3.5L17 8"/><path d="M15 11.5V16"/></svg>'
     title: DiscordPY Next Framework
     details: The Next-Gen file-based framework for discord.py. Bringing HMR and advanced routing to Python.
-    link: /dpy-next/
-    linkText: Coming Soon
   - icon: '<!-- @license lucide-static v1.18.0 - ISC --><svg  class="lucide lucide-zap"  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></svg>'
     title: Lightning Fast Setup
     details: One command to install. One line to import. Your .env is auto-loaded and discord.js is bundled. Just write code.
